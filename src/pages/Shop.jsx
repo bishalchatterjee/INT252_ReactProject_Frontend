@@ -53,7 +53,7 @@ export const shopLoader = async ({ request }) => {
 
   try {
     const response = await axios(
-      `http://localhost:8080/products${parameter}`
+      `https://shop-cart-api.vercel.app/products${parameter}`
 
     );
     let data = response.data;
