@@ -42,10 +42,16 @@ const CartItem = ({ cartItem }) => {
             id="amount"
             className="mt-2 input input-bordered input-sm w-full max-w-xs text-accent-content"
             value={amount}
-           onChange={(event) => dispatch(updateCartAmount({id: id, amount: event.target.value}))}
-            />
+            onChange={(event) => dispatch(updateCartAmount({id: id, amount: event.target.value}))}
+          />
         </div>
         {/* REMOVE */}
+        <button
+          className="mt-2 link link-warning link-hover text-sm text-accent-content"
+          onClick={() => dispatch(removeItem(id))}
+        >
+          remove
+        </button>
         <button
           className="mt-2 link link-warning link-hover text-sm text-accent-content"
           onClick={()=> dispatch(removeItem(id))}
